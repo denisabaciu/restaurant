@@ -228,64 +228,77 @@ img.is-missing { visibility: hidden; }
   .brand-name { font-size: 1.55rem; }
 }
 
-/* ---------- Hero ---------- */
-.hero { padding: 3rem 0 4.5rem; overflow: hidden; }
+/* ---------- Hero: the photo fills the whole first screen ---------- */
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: flex-end;
+  min-height: calc(100vh - 4.4rem);
+  min-height: calc(100svh - 4.4rem);
+  padding: 10rem 0 3rem;
+  overflow: hidden;
+  background: var(--bg);
+}
+.hero-bg img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+/* Shade under the text: from the bottom on phones, from the left on desktop */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top,
+    var(--bg) 0%,
+    rgba(22, 36, 27, 0.92) 40%,
+    rgba(22, 36, 27, 0.6) 64%,
+    rgba(22, 36, 27, 0.12) 88%);
+}
+.hero-inner { position: relative; }
+.hero-content { max-width: 36rem; }
+
 .hero-title {
   font-size: clamp(2.7rem, 10vw, 5.3rem);
   line-height: 1.02;
   letter-spacing: -0.025em;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.2rem;
   max-width: 11ch;
+  text-shadow: 0 2px 24px rgba(10, 18, 13, 0.45);
 }
 .hero-lede {
   font-size: 1.15rem;
   max-width: 46ch;
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
+  color: var(--cream);
 }
 .hero-hours {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin: 1.75rem 0 0;
+  margin: 1.5rem 0 0;
   font-weight: 600;
-  color: var(--muted);
+  color: var(--text);
 }
 .hero-hours svg { color: var(--amber-light); flex: none; }
-
-/* Arched photo frame, with a thin amber line offset around it */
-.hero-arch {
-  position: relative;
-  width: min(84%, 440px);
-  margin: 0.75rem auto 0;
-}
-.hero-arch::before {
-  content: "";
-  position: absolute;
-  inset: -12px;
-  border: 1.5px solid var(--amber);
-  border-radius: 999px 999px 30px 30px;
-  pointer-events: none;
-}
-.hero-photo {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  border-radius: 999px 999px 24px 24px;
-  background: var(--surface-2);
-}
 
 /* "Now serving" stamp: updated from the time of day in Cluj (main.js) */
 .now-stamp {
   position: absolute;
-  left: -1.5rem;
-  bottom: 1.5rem;
+  right: calc(var(--bs-gutter-x) * 0.5);
+  top: -9rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 8.5rem;
-  height: 8.5rem;
+  width: 7.75rem;
+  height: 7.75rem;
   padding: 0.75rem;
   text-align: center;
   color: var(--ink-dark);
@@ -293,7 +306,7 @@ img.is-missing { visibility: hidden; }
   border-radius: 50%;
   outline: 1.5px dashed rgba(19, 38, 15, 0.45);
   outline-offset: -8px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 14px 30px -14px rgba(0, 0, 0, 0.7);
   text-decoration: none;
   transform: rotate(-8deg);
   transition: transform 0.25s ease;
@@ -303,26 +316,42 @@ img.is-missing { visibility: hidden; }
 .now-meal {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   line-height: 1.05;
   margin: 0.15rem 0;
 }
 .now-until { font-size: 0.78rem; line-height: 1.2; }
 
+@media (min-width: 768px) {
+  .hero { padding-bottom: 4.5rem; }
+}
 @media (min-width: 992px) {
-  .hero { padding: 4.5rem 0 6rem; }
+  .hero { align-items: center; padding: 5rem 0; }
+  .hero-bg img { object-position: 50% 50%; }
+  .hero::before {
+    background:
+      linear-gradient(to right,
+        rgba(22, 36, 27, 0.94) 0%,
+        rgba(22, 36, 27, 0.8) 32%,
+        rgba(22, 36, 27, 0.25) 58%,
+        rgba(22, 36, 27, 0) 75%),
+      linear-gradient(to top, var(--bg) 0%, rgba(22, 36, 27, 0) 18%);
+  }
   .hero-lede { font-size: 1.25rem; }
-  .hero-arch { width: min(100%, 440px); }
-  .now-stamp { left: -3.5rem; bottom: 3rem; width: 9.5rem; height: 9.5rem; }
+  .now-stamp { top: 50%; margin-top: -4.75rem; width: 9.5rem; height: 9.5rem; }
   .now-meal { font-size: 1.6rem; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .hero-title, .hero-lede, .hero .btn, .hero-hours { animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
-  .hero-lede { animation-delay: 0.08s; }
-  .hero .btn, .hero-hours { animation-delay: 0.16s; }
-  .hero-arch { animation: rise 1s 0.1s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
-  .now-stamp { animation: stamp 0.6s 0.8s cubic-bezier(0.3, 1.4, 0.5, 1) both; }
+  .hero-bg img { animation: settle 1.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  .hero-title, .hero-lede, .hero .btn, .hero-hours { animation: rise 0.8s 0.2s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  .hero-lede { animation-delay: 0.28s; }
+  .hero .btn, .hero-hours { animation-delay: 0.36s; }
+  .now-stamp { animation: stamp 0.6s 0.9s cubic-bezier(0.3, 1.4, 0.5, 1) both; }
+}
+@keyframes settle {
+  from { transform: scale(1.06); }
+  to { transform: none; }
 }
 @keyframes rise {
   from { opacity: 0; transform: translateY(16px); }

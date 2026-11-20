@@ -15,9 +15,10 @@
   <!-- Speed: fonts and the hero photo load first, everything else lazily -->
   <link rel="preload" href="assets/fonts/young-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" fetchpriority="high" href="assets/img/hero/hero-900.webp"
-        imagesrcset="assets/img/hero/hero-560.webp 560w, assets/img/hero/hero-900.webp 900w"
-        imagesizes="(min-width: 992px) 440px, 82vw">
+  <link rel="preload" as="image" fetchpriority="high" media="(max-aspect-ratio: 4/5)" href="assets/img/hero/hero-tall-720.webp"
+        imagesrcset="assets/img/hero/hero-tall-720.webp 720w, assets/img/hero/hero-tall-1145.webp 1145w" imagesizes="100vw">
+  <link rel="preload" as="image" fetchpriority="high" media="(min-aspect-ratio: 801/1000)" href="assets/img/hero/hero-1400.webp"
+        imagesrcset="assets/img/hero/hero-960.webp 960w, assets/img/hero/hero-1400.webp 1400w, assets/img/hero/hero-1920.webp 1920w" imagesizes="(min-aspect-ratio: 3/2) 100vw, 150vh">
 
   <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -84,36 +85,32 @@
 
   <!-- ============ Hero ============ -->
   <header id="top" class="hero">
-    <div class="container">
-      <div class="row align-items-center gy-5">
-        <div class="col-lg-7">
-          <h1 class="hero-title">Pull up a chair. It&rsquo;s all plants.</h1>
-          <p class="hero-lede">Garden Table is a vegan kitchen in Cluj-Napoca. We cook breakfast, lunch and dinner every day, with fair prices, generous portions and a seat for anyone who&rsquo;s hungry.</p>
-          <div class="d-flex flex-wrap gap-3">
-            <a class="btn btn-amber btn-lg" href="#menu">See the menu</a>
-            <a class="btn btn-outline-cream btn-lg" href="#visit">Book a table</a>
-          </div>
-          <p class="hero-hours">
-            <svg width="18" height="18" fill="currentColor" aria-hidden="true"><use href="#i-clock"/></svg>
-            Open every day from 8:00 to 22:00 on Strada Moților 41
-          </p>
-        </div>
+    <picture class="hero-bg">
+      <source media="(max-aspect-ratio: 4/5)" srcset="assets/img/hero/hero-tall-720.webp 720w, assets/img/hero/hero-tall-1145.webp 1145w" sizes="100vw">
+      <img alt="A sunny table with a salad, a waffle with banana and blueberries, croissants and a glass of orange juice"
+           src="assets/img/hero/hero-1400.webp" srcset="assets/img/hero/hero-960.webp 960w, assets/img/hero/hero-1400.webp 1400w, assets/img/hero/hero-1920.webp 1920w" sizes="(min-aspect-ratio: 3/2) 100vw, 150vh"
+           width="1920" height="1280" fetchpriority="high" decoding="async">
+    </picture>
 
-        <div class="col-lg-5">
-          <div class="hero-arch">
-            <img class="hero-photo"
-                 alt="A sunny table with a salad, a waffle with banana and blueberries, croissants and a glass of orange juice"
-                 src="assets/img/hero/hero-900.webp"
-                 srcset="assets/img/hero/hero-560.webp 560w, assets/img/hero/hero-900.webp 900w"
-                 sizes="(min-width: 992px) 440px, 82vw" width="900" height="1125" fetchpriority="high" decoding="async">
-            <a class="now-stamp" id="nowStamp" href="#menu">
-              <span class="now-label" id="nowLabel">Open daily</span>
-              <strong class="now-meal" id="nowMeal">8 to 22</strong>
-              <span class="now-until" id="nowUntil">see the menu</span>
-            </a>
-          </div>
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h1 class="hero-title">Pull up a chair. It&rsquo;s all plants.</h1>
+        <p class="hero-lede">Garden Table is a vegan kitchen in Cluj-Napoca. We cook breakfast, lunch and dinner every day, with fair prices, generous portions and a seat for anyone who&rsquo;s hungry.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a class="btn btn-amber btn-lg" href="#menu">See the menu</a>
+          <a class="btn btn-outline-cream btn-lg" href="#visit">Book a table</a>
         </div>
+        <p class="hero-hours">
+          <svg width="18" height="18" fill="currentColor" aria-hidden="true"><use href="#i-clock"/></svg>
+          Open every day from 8:00 to 22:00 on Strada Moților 41
+        </p>
       </div>
+
+      <a class="now-stamp" id="nowStamp" href="#menu">
+        <span class="now-label" id="nowLabel">Open daily</span>
+        <strong class="now-meal" id="nowMeal">8 to 22</strong>
+        <span class="now-until" id="nowUntil">see the menu</span>
+      </a>
     </div>
   </header>
 
