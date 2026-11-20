@@ -3,23 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bostan | Vegan kitchen in Cluj-Napoca, open from breakfast to dinner</title>
-  <meta name="description" content="Bostan is a vegan restaurant in Cluj-Napoca serving breakfast, lunch, dinner, desserts and drinks every day from 8:00 to 22:00, with a 35 lei lunch menu on weekdays.">
-  <meta name="theme-color" content="#ffd447">
-  <meta property="og:title" content="Bostan | Vegan kitchen in Cluj-Napoca">
-  <meta property="og:description" content="Plant-based breakfast, lunch and dinner every day, with a 35 lei lunch menu on weekdays.">
+  <title>Garden Table | Vegan kitchen in Cluj-Napoca, from breakfast to dinner</title>
+  <meta name="description" content="Garden Table is a vegan restaurant in Cluj-Napoca serving breakfast, lunch, dinner, desserts and drinks every day from 8:00 to 22:00, with a 35 lei lunch of the day on weekdays.">
+  <meta name="theme-color" content="#fbf4e6">
+  <meta property="og:title" content="Garden Table | Vegan kitchen in Cluj-Napoca">
+  <meta property="og:description" content="Plant-based comfort food from breakfast to dinner, with a 35 lei lunch of the day on weekdays.">
   <meta property="og:type" content="website">
 
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 
-  <!-- Speed: fonts and the hero photo first, everything else loads lazily -->
-  <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Speed: fonts and the hero photo load first, everything else lazily -->
+  <link rel="preload" href="assets/fonts/young-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
-  <link rel="preload" as="image" fetchpriority="high"
-        href="https://images.unsplash.com/photo-1542814784-133212a2e378?auto=format&fit=crop&w=800&h=800&q=60"
-        imagesrcset="https://images.unsplash.com/photo-1542814784-133212a2e378?auto=format&fit=crop&w=480&h=480&q=60 480w, https://images.unsplash.com/photo-1542814784-133212a2e378?auto=format&fit=crop&w=800&h=800&q=60 800w"
-        imagesizes="(min-width: 992px) 460px, 80vw">
+  <link rel="preload" as="image" fetchpriority="high" href="assets/img/hero/hero-900.webp"
+        imagesrcset="assets/img/hero/hero-560.webp 560w, assets/img/hero/hero-900.webp 900w"
+        imagesizes="(min-width: 992px) 440px, 82vw">
 
   <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -27,24 +25,30 @@
 
 <body>
 
-  <!-- Icon sprite: social and contact icons from Bootstrap Icons (MIT), logo and leaf are original -->
+  <!-- Icon sprite: logo and leaf are original; the other icons are from Bootstrap Icons (MIT) -->
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none" aria-hidden="true">
-    <symbol id="logo" viewBox="0 0 44 44">
-      <path d="M22 13c0-4 1.4-7 4-9" fill="none" stroke="#1f3b2c" stroke-width="2.5" stroke-linecap="round"/>
-      <path d="M25 7.5c3.5-3.2 8.6-3 11.5.2-3.6 2.6-8.3 2.7-11.5-.2z" fill="#3fa34d" stroke="#1f3b2c" stroke-width="2" stroke-linejoin="round"/>
-      <ellipse cx="14" cy="28" rx="10" ry="12.5" fill="#ff7b22" stroke="#1f3b2c" stroke-width="2.5"/>
-      <ellipse cx="30" cy="28" rx="10" ry="12.5" fill="#ff7b22" stroke="#1f3b2c" stroke-width="2.5"/>
-      <ellipse cx="22" cy="28" rx="7.5" ry="13.5" fill="#ff9a4d" stroke="#1f3b2c" stroke-width="2.5"/>
+    <symbol id="logo" viewBox="0 0 96 64">
+      <g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="48" cy="33" r="23"/>
+        <circle cx="48" cy="33" r="17" stroke-width="1.6"/>
+        <path d="M48 44c0-6 .3-11 2.5-16"/>
+        <path d="M48.6 36c-4.6.6-8.6-1.8-10.4-6.2 4.8-.8 8.8 1.6 10.4 6.2z" fill="var(--logo-leaf, #47632b)"/>
+        <path d="M50.4 28.5c1.4-5.4 6-8.6 11.4-8.2-1.2 5.4-5.8 8.6-11.4 8.2z" fill="var(--logo-leaf, #47632b)"/>
+        <path d="M11 12v9m4-9v9m4-9v9"/>
+        <path d="M11 21c0 3 1.8 5 4 5s4-2 4-5"/>
+        <path d="M15 26v28"/>
+        <path d="M81 54V12c4.6 2.6 6.4 9 5.6 17H81"/>
+      </g>
     </symbol>
     <symbol id="i-leaf" viewBox="0 0 16 16"><path d="M14.5 1.5C7.5 1.6 2 5 2 10.7c0 1.2.3 2.3.8 3.2C4.2 9.3 7.6 6.6 11.3 5.4 8 7.4 5.2 10.2 3.8 14.6c.9.3 1.8.4 2.7.4 5.3 0 8.2-4.6 8-13.5z"/></symbol>
     <symbol id="i-coin" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8m5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0"/><path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195z"/><path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083q.088-.517.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1z"/><path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 6 6 0 0 1 3.13-1.567"/></symbol>
     <symbol id="i-list" viewBox="0 0 16 16"><path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/><path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0M7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0"/></symbol>
-    <symbol id="i-access" viewBox="0 0 16 16"><path d="M9.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0M6 5.5l-4.535-.442A.531.531 0 0 1 1.531 4H14.47a.531.531 0 0 1 .066 1.058L10 5.5V9l.452 6.42a.535.535 0 0 1-1.053.174L8.243 9.970c-.064-.252-.422-.252-.486 0l-1.156 5.624a.535.535 0 0 1-1.053-.174L6 9z"/></symbol>
+    <symbol id="i-access" viewBox="0 0 16 16"><path d="M9.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0M6 5.5l-4.535-.442A.531.531 0 0 1 1.531 4H14.47a.531.531 0 0 1 .066 1.058L10 5.5V9l.452 6.42a.535.535 0 0 1-1.053.174L8.243 9.97c-.064-.252-.422-.252-.486 0l-1.156 5.624a.535.535 0 0 1-1.053-.174L6 9z"/></symbol>
     <symbol id="i-pin" viewBox="0 0 16 16"><path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/><path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></symbol>
     <symbol id="i-phone" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/></symbol>
     <symbol id="i-mail" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></symbol>
     <symbol id="i-clock" viewBox="0 0 16 16"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/></symbol>
-    <symbol id="i-instagram" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.850.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></symbol>
     <symbol id="i-facebook" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></symbol>
     <symbol id="i-tiktok" viewBox="0 0 16 16"><path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/></symbol>
   </svg>
@@ -54,9 +58,12 @@
   <!-- ============ Navigation ============ -->
   <nav id="mainNav" class="navbar navbar-expand-lg sticky-top site-nav" aria-label="Main">
     <div class="container">
-      <a class="navbar-brand brand" href="#top" aria-label="Bostan, back to top">
-        <svg class="brand-mark" width="40" height="40" aria-hidden="true"><use href="#logo"/></svg>
-        <span class="brand-name">Bostan</span>
+      <a class="navbar-brand brand" href="#top" aria-label="Garden Table, back to top">
+        <svg class="brand-mark" width="54" height="36" aria-hidden="true"><use href="#logo"/></svg>
+        <span class="brand-text">
+          <span class="brand-name">Garden Table</span>
+          <span class="brand-tag">Vegan Kitchen</span>
+        </span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
               aria-controls="navMenu" aria-expanded="false" aria-label="Open menu">
@@ -64,12 +71,12 @@
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="#about">Why Bostan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
           <li class="nav-item"><a class="nav-link" href="#lunch">Lunch of the day</a></li>
           <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="#visit">Visit</a></li>
-          <li class="nav-item ms-lg-3 my-3 my-lg-0"><a class="btn btn-pumpkin" href="#visit">Book a table</a></li>
+          <li class="nav-item ms-lg-3 my-3 my-lg-0"><a class="btn btn-orange" href="#visit">Book a table</a></li>
         </ul>
       </div>
     </div>
@@ -80,26 +87,29 @@
     <div class="container">
       <div class="row align-items-center gy-5">
         <div class="col-lg-7">
-          <h1 class="hero-title">Vegan food for everyone who&rsquo;s hungry.</h1>
-          <p class="hero-lede">Bostan is a plant-based kitchen in Cluj-Napoca. We cook breakfast, lunch and dinner every day, at fair prices and in portions that keep you full until the next meal.</p>
+          <h1 class="hero-title">Pull up a chair. It&rsquo;s all plants.</h1>
+          <p class="hero-lede">Garden Table is a vegan kitchen in Cluj-Napoca. We cook breakfast, lunch and dinner every day, with fair prices, generous portions and a seat for anyone who&rsquo;s hungry.</p>
           <div class="d-flex flex-wrap gap-3">
-            <a class="btn btn-pumpkin btn-lg" href="#menu">See the menu</a>
-            <a class="btn btn-ink-outline btn-lg" href="#visit">Find us</a>
+            <a class="btn btn-orange btn-lg" href="#menu">See the menu</a>
+            <a class="btn btn-outline-forest btn-lg" href="#visit">Book a table</a>
           </div>
-          <p class="hero-hours">Open every day from 8:00 to 22:00 on Strada Moților 41.</p>
+          <p class="hero-hours">
+            <svg width="18" height="18" fill="currentColor" aria-hidden="true"><use href="#i-clock"/></svg>
+            Open every day from 8:00 to 22:00 on Strada Moților 41
+          </p>
         </div>
 
         <div class="col-lg-5">
-          <div class="hero-plate">
+          <div class="hero-arch">
             <img class="hero-photo"
-                 alt="A bowl of colourful vegetables seen from above"
-                 src="https://images.unsplash.com/photo-1542814784-133212a2e378?auto=format&fit=crop&w=800&h=800&q=60"
-                 srcset="https://images.unsplash.com/photo-1542814784-133212a2e378?auto=format&fit=crop&w=480&h=480&q=60 480w, https://images.unsplash.com/photo-1542814784-133212a2e378?auto=format&fit=crop&w=800&h=800&q=60 800w"
-                 sizes="(min-width: 992px) 460px, 80vw" width="800" height="800" fetchpriority="high" decoding="async">
-            <a class="now-tag" id="nowTag" href="#menu">
-              <span class="now-label">Open every day</span>
-              <strong class="now-meal" id="nowMeal">8:00 to 22:00</strong>
-              <span class="now-until" id="nowUntil">Breakfast, lunch and dinner</span>
+                 alt="A sunny table with a salad, a waffle with banana and blueberries, croissants and a glass of orange juice"
+                 src="assets/img/hero/hero-900.webp"
+                 srcset="assets/img/hero/hero-560.webp 560w, assets/img/hero/hero-900.webp 900w"
+                 sizes="(min-width: 992px) 440px, 82vw" width="900" height="1125" fetchpriority="high" decoding="async">
+            <a class="now-stamp" id="nowStamp" href="#menu">
+              <span class="now-label" id="nowLabel">Open daily</span>
+              <strong class="now-meal" id="nowMeal">8 to 22</strong>
+              <span class="now-until" id="nowUntil">see the menu</span>
             </a>
           </div>
         </div>
@@ -109,7 +119,7 @@
 
   <main id="main">
 
-    <!-- ============ Why Bostan: features + counters ============ -->
+    <!-- ============ About: features + counters ============ -->
     <section id="about" class="section">
       <div class="container">
         <div class="row gx-lg-5 gy-4 align-items-end section-head">
@@ -117,35 +127,35 @@
             <h2 class="section-title">Why people keep coming back</h2>
           </div>
           <div class="col-lg-6">
-            <p class="section-intro">Bostan is another Romanian word for pumpkin, and like a pumpkin we&rsquo;re big, cheerful and hard to dislike. You don&rsquo;t have to be vegan to eat here. Most of our regulars aren&rsquo;t.</p>
+            <p class="section-intro">We called it Garden Table because that&rsquo;s all we wanted to be: food that grows in a garden, served at a table with room for everyone. You don&rsquo;t have to be vegan to eat here. Most of our regulars aren&rsquo;t.</p>
           </div>
         </div>
 
         <div class="row g-4">
           <div class="col-sm-6 col-lg-3">
             <div class="feature">
-              <span class="feature-icon fi-sun"><svg width="26" height="26" fill="currentColor" aria-hidden="true"><use href="#i-leaf"/></svg></span>
+              <span class="feature-icon"><svg width="24" height="24" fill="currentColor" aria-hidden="true"><use href="#i-leaf"/></svg></span>
               <h3>Only plants, no lectures</h3>
-              <p>Everything we cook is vegan, down to the wine and the sugar. Nobody will ask you to be.</p>
+              <p>Everything we cook is vegan, down to the bread and the sugar. Nobody will ask you to be.</p>
             </div>
           </div>
           <div class="col-sm-6 col-lg-3">
             <div class="feature">
-              <span class="feature-icon fi-pumpkin"><svg width="26" height="26" fill="currentColor" aria-hidden="true"><use href="#i-coin"/></svg></span>
-              <h3>Prices that fit a student budget</h3>
-              <p>Soup and a main for 35 lei on weekdays. Show a student card and you get 10% off the rest of the menu.</p>
+              <span class="feature-icon"><svg width="24" height="24" fill="currentColor" aria-hidden="true"><use href="#i-coin"/></svg></span>
+              <h3>Fair prices, every day</h3>
+              <p>Soup and a main for 35 lei on weekdays, and 10% off the menu with a student card.</p>
             </div>
           </div>
           <div class="col-sm-6 col-lg-3">
             <div class="feature">
-              <span class="feature-icon fi-mint"><svg width="26" height="26" fill="currentColor" aria-hidden="true"><use href="#i-list"/></svg></span>
+              <span class="feature-icon"><svg width="24" height="24" fill="currentColor" aria-hidden="true"><use href="#i-list"/></svg></span>
               <h3>Allergens on every dish</h3>
-              <p>Each plate is marked for gluten, nuts, soy and sesame, and our staff can check anything else with the kitchen.</p>
+              <p>Each plate lists gluten, nuts, soy, sesame and celery, and many dishes come gluten-free or can be made so.</p>
             </div>
           </div>
           <div class="col-sm-6 col-lg-3">
             <div class="feature">
-              <span class="feature-icon fi-blush"><svg width="26" height="26" fill="currentColor" aria-hidden="true"><use href="#i-access"/></svg></span>
+              <span class="feature-icon"><svg width="24" height="24" fill="currentColor" aria-hidden="true"><use href="#i-access"/></svg></span>
               <h3>Room for everyone</h3>
               <p>A step-free entrance, high chairs, half portions for children and water bowls for dogs on the terrace.</p>
             </div>
@@ -154,7 +164,7 @@
       </div>
     </section>
 
-    <section class="counters" aria-label="Bostan in numbers">
+    <section class="counters" aria-label="Garden Table in numbers">
       <div class="container">
         <div class="row gy-4 text-center">
           <div class="col-6 col-lg-3">
@@ -162,8 +172,8 @@
             <p class="counter-label">for soup and a main, Monday to Friday</p>
           </div>
           <div class="col-6 col-lg-3">
-            <p class="counter"><span class="counter-value" data-count="14">14</span><span class="counter-unit">hours</span></p>
-            <p class="counter-label">open every day, from 8:00 to 22:00</p>
+            <p class="counter"><span class="counter-value" data-count="24">24</span><span class="counter-unit">dishes</span></p>
+            <p class="counter-label">from breakfast to dessert, plus 18 drinks</p>
           </div>
           <div class="col-6 col-lg-3">
             <p class="counter"><span class="counter-value" data-count="9">9</span><span class="counter-unit">growers</span></p>
@@ -178,73 +188,102 @@
     </section>
 
     <!-- ============ Menu: tabs with cards ============ -->
-    <section id="menu" class="section section-tint">
+    <section id="menu" class="section section-deep">
       <div class="container">
         <div class="row gx-lg-5 gy-4 align-items-end section-head">
           <div class="col-lg-6">
             <h2 class="section-title">Something good at every hour</h2>
           </div>
           <div class="col-lg-6">
-            <p class="section-intro">The menu changes a little with the seasons. Prices are per portion and include VAT. Children under 12 can have any main as a half portion at half price.</p>
+            <p class="section-intro">Prices are per portion and include VAT. Children under 12 can have any main as a half portion at half price.</p>
           </div>
         </div>
 
         <ul class="nav meal-tabs" id="mealTabs" role="tablist">
           <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="tab-breakfast" data-meal="breakfast" data-bs-toggle="pill" data-bs-target="#pane-breakfast" type="button" role="tab" aria-controls="pane-breakfast" aria-selected="true">Breakfast<small>8:00 to 11:30</small></button>
+            <button class="nav-link active" id="tab-breakfast" data-bs-toggle="pill" data-bs-target="#pane-breakfast" type="button" role="tab" aria-controls="pane-breakfast" aria-selected="true">Breakfast<small>8:00 to 11:30</small></button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="tab-lunch" data-meal="lunch" data-bs-toggle="pill" data-bs-target="#pane-lunch" type="button" role="tab" aria-controls="pane-lunch" aria-selected="false">Lunch<small>12:00 to 16:00</small></button>
+            <button class="nav-link" id="tab-lunch" data-bs-toggle="pill" data-bs-target="#pane-lunch" type="button" role="tab" aria-controls="pane-lunch" aria-selected="false">Lunch<small>12:00 to 16:00</small></button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="tab-dinner" data-meal="dinner" data-bs-toggle="pill" data-bs-target="#pane-dinner" type="button" role="tab" aria-controls="pane-dinner" aria-selected="false">Dinner<small>17:00 to 22:00</small></button>
+            <button class="nav-link" id="tab-dinner" data-bs-toggle="pill" data-bs-target="#pane-dinner" type="button" role="tab" aria-controls="pane-dinner" aria-selected="false">Dinner<small>17:00 to 22:00</small></button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="tab-dessert" data-meal="dessert" data-bs-toggle="pill" data-bs-target="#pane-dessert" type="button" role="tab" aria-controls="pane-dessert" aria-selected="false">Desserts<small>all day</small></button>
+            <button class="nav-link" id="tab-dessert" data-bs-toggle="pill" data-bs-target="#pane-dessert" type="button" role="tab" aria-controls="pane-dessert" aria-selected="false">Desserts<small>all day</small></button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="tab-drinks" data-meal="drinks" data-bs-toggle="pill" data-bs-target="#pane-drinks" type="button" role="tab" aria-controls="pane-drinks" aria-selected="false">Drinks<small>all day</small></button>
+            <button class="nav-link" id="tab-drinks" data-bs-toggle="pill" data-bs-target="#pane-drinks" type="button" role="tab" aria-controls="pane-drinks" aria-selected="false">Drinks<small>all day</small></button>
           </li>
         </ul>
 
         <div class="tab-content" id="mealPanes">
 
           <!-- Breakfast -->
-          <div class="tab-pane fade show active meal-pane" data-meal="breakfast" id="pane-breakfast" role="tabpanel" aria-labelledby="tab-breakfast" tabindex="0">
+          <div class="tab-pane fade show active" id="pane-breakfast" role="tabpanel" aria-labelledby="tab-breakfast" tabindex="0">
+            <h3 class="menu-group">Savoury</h3>
             <div class="row g-4">
               <div class="col-md-6 col-lg-4">
                 <article class="card dish h-100">
-                  <img class="card-img-top" alt="Avocado on dark bread with green leaves"
-                       src="https://images.unsplash.com/photo-1612783191467-e7cd68b2ea1b?auto=format&fit=crop&w=600&h=450&q=60"
-                       width="600" height="450" loading="lazy" decoding="async">
+                  <img class="card-img-top" src="assets/img/menu/beans-tofu-toast.webp" alt="Scrambled tofu with red pepper, baked beans, seeded bread with vegan butter and a green salad" width="640" height="480" loading="lazy" decoding="async">
                   <div class="card-body">
-                    <div class="dish-head"><h3 class="card-title">Avocado toast</h3><span class="dish-price">29 lei</span></div>
-                    <p class="card-text">Toasted sourdough, crushed avocado with lime, cherry tomatoes, radish and a pinch of chilli.</p>
-                    <ul class="dish-tags"><li>Gluten-free bread on request</li></ul>
+                    <div class="dish-head"><h4 class="card-title">Beans &amp; tofu on toast</h4><span class="dish-price">32 lei</span></div>
+                    <p class="card-text">Smoky baked beans, tofu scrambled with red pepper and onion, seeded toast with vegan butter and a small side salad.</p>
+                    <ul class="dish-tags"><li>Contains soy</li><li>Contains gluten</li><li>Nut-free</li><li>Gluten-free bread on request</li></ul>
                   </div>
                 </article>
               </div>
               <div class="col-md-6 col-lg-4">
                 <article class="card dish h-100">
-                  <img class="card-img-top" alt="Toast with sliced tomatoes and green leaves"
-                       src="https://images.unsplash.com/photo-1614390955919-e39527ef7ca5?auto=format&fit=crop&w=600&h=450&q=60"
-                       width="600" height="450" loading="lazy" decoding="async">
+                  <img class="card-img-top" src="assets/img/menu/breakfast-bowl.webp" alt="A bowl of quinoa, chickpeas, roasted tofu, avocado, carrot and microgreens" width="640" height="480" loading="lazy" decoding="async">
                   <div class="card-body">
-                    <div class="dish-head"><h3 class="card-title">Tofu scramble toast</h3><span class="dish-price">31 lei</span></div>
-                    <p class="card-text">Soft tofu scrambled with turmeric and spring onion, on rye toast with tomatoes and rocket.</p>
-                    <ul class="dish-tags"><li>Contains soy</li><li>Contains gluten</li></ul>
+                    <div class="dish-head"><h4 class="card-title">Breakfast salad bowl</h4><span class="dish-price">34 lei</span></div>
+                    <p class="card-text">Warm quinoa, crispy chickpeas, roasted tofu, avocado, carrot ribbons and roasted tomatoes, with microgreens and a spoon of coconut yoghurt.</p>
+                    <ul class="dish-tags"><li>Gluten-free</li><li>Contains soy</li><li>Nut-free</li></ul>
                   </div>
                 </article>
               </div>
               <div class="col-md-6 col-lg-4 mx-md-auto">
                 <article class="card dish h-100">
-                  <img class="card-img-top" alt="A breakfast bowl of porridge topped with red fruit and green garnish"
-                       src="https://images.unsplash.com/photo-1631077019185-84d961548731?auto=format&fit=crop&w=600&h=450&q=60"
-                       width="600" height="450" loading="lazy" decoding="async">
+                  <img class="card-img-top" src="assets/img/menu/avocado-toast.webp" alt="Avocado toast with yellow cherry tomatoes, green leaves and black sesame" width="640" height="480" loading="lazy" decoding="async">
                   <div class="card-body">
-                    <div class="dish-head"><h3 class="card-title">Warm porridge bowl</h3><span class="dish-price">22 lei</span></div>
-                    <p class="card-text">Oats cooked slowly in oat milk, topped with berries, peanut butter and toasted seeds.</p>
-                    <ul class="dish-tags"><li>Contains peanuts</li></ul>
+                    <div class="dish-head"><h4 class="card-title">Avocado toast</h4><span class="dish-price">29 lei</span></div>
+                    <p class="card-text">Sliced avocado on seeded sourdough with yellow cherry tomatoes, lamb&rsquo;s lettuce, black sesame and a squeeze of lemon.</p>
+                    <ul class="dish-tags"><li>Contains gluten</li><li>Contains sesame</li><li>Nut-free</li><li>Gluten-free bread on request</li></ul>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <h3 class="menu-group">Sweet</h3>
+            <div class="row g-4">
+              <div class="col-md-6 col-lg-4">
+                <article class="card dish h-100">
+                  <img class="card-img-top" src="assets/img/menu/oatmeal.webp" alt="A bowl of oatmeal topped with banana, blueberries and seeds" width="640" height="480" loading="lazy" decoding="async">
+                  <div class="card-body">
+                    <div class="dish-head"><h4 class="card-title">Banana &amp; blueberry oatmeal</h4><span class="dish-price">22 lei</span></div>
+                    <p class="card-text">Oats cooked slowly in oat milk with cinnamon, topped with banana, blueberries, chia seeds and black sesame.</p>
+                    <ul class="dish-tags"><li>Contains sesame</li><li>Nut-free</li><li>Gluten-free oats on request</li></ul>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <article class="card dish h-100">
+                  <img class="card-img-top" src="assets/img/menu/pancakes.webp" alt="A stack of pancakes with raspberries, blueberries and syrup" width="640" height="480" loading="lazy" decoding="async">
+                  <div class="card-body">
+                    <div class="dish-head"><h4 class="card-title">Fluffy berry pancakes</h4><span class="dish-price">27 lei</span></div>
+                    <p class="card-text">A stack of pancakes made with oat milk, with raspberries, blueberries, maple syrup and a dusting of icing sugar.</p>
+                    <ul class="dish-tags"><li>Contains gluten</li><li>Nut-free</li></ul>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-6 col-lg-4 mx-md-auto">
+                <article class="card dish h-100">
+                  <img class="card-img-top" src="assets/img/menu/waffles.webp" alt="Cocoa waffles with whipped cream, fresh figs and pine nuts" width="640" height="480" loading="lazy" decoding="async">
+                  <div class="card-body">
+                    <div class="dish-head"><h4 class="card-title">Cocoa buckwheat waffles</h4><span class="dish-price">29 lei</span></div>
+                    <p class="card-text">Two buckwheat and cocoa waffles with whipped coconut cream, fresh figs, toasted pine nuts and mint.</p>
+                    <ul class="dish-tags"><li>Gluten-free</li><li>Contains pine nuts</li><li>Contains coconut</li></ul>
                   </div>
                 </article>
               </div>
@@ -252,50 +291,72 @@
             <div class="more-dishes">
               <h3>Also for breakfast</h3>
               <ul>
-                <li><span>Granola with coconut yoghurt and stewed plums</span><span>21 lei</span></li>
-                <li><span>Zacuscă on toast with pickled red onion</span><span>18 lei</span></li>
-                <li><span>Buckwheat pancakes with apple and cinnamon</span><span>26 lei</span></li>
+                <li><span>Croissant with plant-based egg, avocado and rocket</span><span>26 lei</span></li>
                 <li><span>Any breakfast with a filter coffee, before 10:00</span><span>+5 lei</span></li>
               </ul>
             </div>
           </div>
 
           <!-- Lunch -->
-          <div class="tab-pane fade meal-pane" data-meal="lunch" id="pane-lunch" role="tabpanel" aria-labelledby="tab-lunch" tabindex="0">
+          <div class="tab-pane fade" id="pane-lunch" role="tabpanel" aria-labelledby="tab-lunch" tabindex="0">
             <div class="row g-4">
               <div class="col-md-6 col-lg-4">
                 <article class="card dish h-100">
-                  <img class="card-img-top" alt="Creamy orange pumpkin soup in a white bowl"
-                       src="https://images.unsplash.com/photo-1605034997426-399051e3f7ae?auto=format&fit=crop&w=600&h=450&q=60"
-                       width="600" height="450" loading="lazy" decoding="async">
+                  <img class="card-img-top" src="assets/img/menu/burrito.webp" alt="A burrito cut in half, filled with tofu, red cabbage and herbs" width="640" height="480" loading="lazy" decoding="async">
                   <div class="card-body">
-                    <div class="dish-head"><h3 class="card-title">Bostan soup</h3><span class="dish-price">19 lei</span></div>
-                    <p class="card-text">The soup we&rsquo;re named after: roasted pumpkin, ginger and coconut milk, with toasted seeds and bread.</p>
-                    <ul class="dish-tags"><li>Gluten-free without the bread</li></ul>
+                    <div class="dish-head"><h3 class="card-title">Tofu crunch burrito</h3><span class="dish-price">36 lei</span></div>
+                    <p class="card-text">Spiced tofu &ldquo;taco meat&rdquo;, guacamole, white bean queso, tomato, red cabbage and carrot slaw and a layer of tortilla chips, wrapped in a toasted flour tortilla. Served with lime.</p>
+                    <ul class="dish-tags"><li>Contains soy</li><li>Contains gluten</li><li>Nut-free</li><li>Gluten-free tortilla on request</li></ul>
                   </div>
                 </article>
               </div>
               <div class="col-md-6 col-lg-4">
                 <article class="card dish h-100">
-                  <img class="card-img-top" alt="A vegan burger with tomato and lettuce on a wooden plate"
-                       src="https://images.unsplash.com/photo-1592415499556-74fcb9f18667?auto=format&fit=crop&w=600&h=450&q=60"
-                       width="600" height="450" loading="lazy" decoding="async">
+                  <img class="card-img-top" src="assets/img/menu/sesame-noodles.webp" alt="A bowl of soba noodles with edamame, snap peas, carrot and chilli sauce" width="569" height="427" loading="lazy" decoding="async">
                   <div class="card-body">
-                    <div class="dish-head"><h3 class="card-title">Bostan burger</h3><span class="dish-price">39 lei</span></div>
-                    <p class="card-text">A bean and beetroot patty with tomato, lettuce, pickles and smoked garlic mayo, served with oven fries.</p>
-                    <ul class="dish-tags"><li>Contains gluten</li><li>Contains mustard</li></ul>
+                    <div class="dish-head"><h3 class="card-title">Creamy sesame noodle salad</h3><span class="dish-price">34 lei</span></div>
+                    <p class="card-text">Cold soba noodles in a creamy tahini and soy dressing, with edamame, sugar snap peas, carrot ribbons, coriander, sesame seeds and a drizzle of chilli sauce.</p>
+                    <ul class="dish-tags"><li>Contains sesame</li><li>Contains soy</li><li>Contains gluten</li><li>Nut-free</li><li>Mildly spicy</li></ul>
                   </div>
                 </article>
               </div>
-              <div class="col-md-6 col-lg-4 mx-md-auto">
+              <div class="col-md-6 col-lg-4">
                 <article class="card dish h-100">
-                  <img class="card-img-top" alt="A bowl of hummus with chickpeas, avocado, peppers and parsley"
-                       src="https://images.unsplash.com/photo-1528711545549-a46d7ce42574?auto=format&fit=crop&w=600&h=450&q=60"
-                       width="600" height="450" loading="lazy" decoding="async">
+                  <img class="card-img-top" src="assets/img/menu/garden-burger.webp" alt="A burger with lettuce and tomato, served with fries and slaw" width="640" height="480" loading="lazy" decoding="async">
                   <div class="card-body">
-                    <div class="dish-head"><h3 class="card-title">Hummus bowl</h3><span class="dish-price">34 lei</span></div>
-                    <p class="card-text">Smooth hummus with crispy chickpeas, roasted peppers, avocado and herbs, with warm flatbread.</p>
-                    <ul class="dish-tags"><li>Contains sesame</li><li>Gluten-free without the flatbread</li></ul>
+                    <div class="dish-head"><h3 class="card-title">Garden burger with fries</h3><span class="dish-price">39 lei</span></div>
+                    <p class="card-text">A grilled black bean and mushroom patty with melting vegan cheddar, tomato, lettuce and basil mayo in a soft bun, with red cabbage slaw and fries. Sweet potato fries for 4 lei more.</p>
+                    <ul class="dish-tags"><li>Contains gluten</li><li>Contains soy</li><li>Contains mustard</li><li>Nut-free</li><li>Gluten-free bun on request</li></ul>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <article class="card dish h-100">
+                  <img class="card-img-top" src="assets/img/menu/lentil-soup.webp" alt="A bowl of lentil soup with potatoes, carrots and meatballs" width="640" height="480" loading="lazy" decoding="async">
+                  <div class="card-body">
+                    <div class="dish-head"><h3 class="card-title">Hearty lentil soup</h3><span class="dish-price">22 lei</span></div>
+                    <p class="card-text">Green lentils simmered with potato, carrot, celery, red pepper, garlic, thyme and rosemary, with plant-based meatballs and spring onion. Served with rye crispbread and vegan sour cream.</p>
+                    <ul class="dish-tags"><li>Contains celery</li><li>Contains soy</li><li>Contains gluten</li><li>Nut-free</li></ul>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <article class="card dish h-100">
+                  <img class="card-img-top" src="assets/img/menu/roasted-veg-bowl.webp" alt="A bowl of roasted cauliflower, peppers and courgette with herbs" width="640" height="480" loading="lazy" decoding="async">
+                  <div class="card-body">
+                    <div class="dish-head"><h3 class="card-title">Roasted vegetable bowl</h3><span class="dish-price">35 lei</span></div>
+                    <p class="card-text">Oven-roasted cauliflower, red pepper and courgette with black beans, golden potatoes and fresh coriander, finished with a garlic tahini drizzle and lemon aioli on the side.</p>
+                    <ul class="dish-tags"><li>Gluten-free</li><li>Contains sesame</li><li>Nut-free</li></ul>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <article class="card dish h-100">
+                  <img class="card-img-top" src="assets/img/menu/falafel-bowl.webp" alt="Falafel on hummus with pickled red cabbage, green sauce and herbs" width="640" height="480" loading="lazy" decoding="async">
+                  <div class="card-body">
+                    <div class="dish-head"><h3 class="card-title">Falafel &amp; hummus bowl with warm pita</h3><span class="dish-price">37 lei</span></div>
+                    <p class="card-text">Crispy falafel on smooth hummus with pickled red cabbage, green herb tahini, mango amba, a spoon of spicy zhoug, chilli flakes, mint and parsley, with homemade pita on the side.</p>
+                    <ul class="dish-tags"><li>Contains sesame</li><li>Contains gluten</li><li>Nut-free</li><li>Gluten-free without the pita</li></ul>
                   </div>
                 </article>
               </div>
@@ -303,101 +364,138 @@
             <div class="more-dishes">
               <h3>Also for lunch</h3>
               <ul>
-                <li><span>Lunch of the day, soup and a main (Monday to Friday)</span><span>35 lei</span></li>
-                <li><span>Falafel wrap with pickled cabbage and tahini</span><span>32 lei</span></li>
-                <li><span>Big green salad with lentils and walnuts</span><span>30 lei</span></li>
-                <li><span>Oven fries with smoked paprika</span><span>14 lei</span></li>
+                <li><span>Lunch of the day, soup and a main, Monday to Friday (<a href="#lunch">see this week</a>)</span><span>35 lei</span></li>
               </ul>
             </div>
           </div>
 
           <!-- Dinner -->
-          <div class="tab-pane fade meal-pane" data-meal="dinner" id="pane-dinner" role="tabpanel" aria-labelledby="tab-dinner" tabindex="0">
+          <div class="tab-pane fade" id="pane-dinner" role="tabpanel" aria-labelledby="tab-dinner" tabindex="0">
             <div class="row g-4">
               <div class="col-md-6 col-lg-4">
                 <article class="card dish h-100">
-                  <img class="card-img-top" alt="A bowl of curry served with flatbread on a wooden table"
-                       src="https://images.unsplash.com/photo-1671507136750-05ebd0f97843?auto=format&fit=crop&w=600&h=450&q=60"
-                       width="600" height="450" loading="lazy" decoding="async">
+                  <img class="card-img-top" src="assets/img/menu/enchilada-skillet.webp" alt="A cast iron skillet of baked enchiladas under melted cheese and herbs" width="640" height="480" loading="lazy" decoding="async">
                   <div class="card-body">
-                    <div class="dish-head"><h3 class="card-title">Chickpea curry</h3><span class="dish-price">38 lei</span></div>
-                    <p class="card-text">Chickpeas and spinach in a tomato and coconut sauce, with basmati rice and a flatbread from the oven.</p>
-                    <ul class="dish-tags"><li>Mildly spicy</li><li>Contains gluten</li></ul>
+                    <div class="dish-head"><h3 class="card-title">Cheesy enchilada skillet</h3><span class="dish-price">38 lei</span></div>
+                    <p class="card-text">Sweet potato, green pepper, black beans and strips of corn tortilla baked in a red enchilada sauce under melting cashew cheese, with spring onion and fresh herbs. Served in the pan.</p>
+                    <ul class="dish-tags"><li>Gluten-free</li><li>Contains cashews</li><li>Mildly spicy</li></ul>
                   </div>
                 </article>
               </div>
               <div class="col-md-6 col-lg-4">
                 <article class="card dish h-100">
-                  <img class="card-img-top" alt="A plate of pasta with tomatoes and parsley"
-                       src="https://images.unsplash.com/photo-1713449585141-0af71bcbfcc2?auto=format&fit=crop&w=600&h=450&q=60"
-                       width="600" height="450" loading="lazy" decoding="async">
+                  <img class="card-img-top" src="assets/img/menu/aubergine-bolognese.webp" alt="Tagliatelle with a rich ragù, grated topping and microgreens" width="640" height="480" loading="lazy" decoding="async">
                   <div class="card-body">
-                    <div class="dish-head"><h3 class="card-title">Roast tomato pasta</h3><span class="dish-price">34 lei</span></div>
-                    <p class="card-text">Spaghetti tossed with slow-roasted cherry tomatoes, garlic, olive oil and plenty of parsley.</p>
-                    <ul class="dish-tags"><li>Contains gluten</li><li>Gluten-free pasta on request</li></ul>
+                    <div class="dish-head"><h3 class="card-title">Aubergine bolognese</h3><span class="dish-price">36 lei</span></div>
+                    <p class="card-text">Ribbons of tagliatelle in a slow-cooked ragù of aubergine, carrot, onion, garlic and tomato with a pinch of chilli, topped with vegan parmesan and microgreens.</p>
+                    <ul class="dish-tags"><li>Contains gluten</li><li>Contains cashews</li><li>Gluten-free pasta on request</li></ul>
                   </div>
                 </article>
               </div>
-              <div class="col-md-6 col-lg-4 mx-md-auto">
+              <div class="col-md-6 col-lg-4">
                 <article class="card dish h-100">
-                  <img class="card-img-top" alt="Tacos topped with pink sauce, avocado and vegetables"
-                       src="https://images.unsplash.com/photo-1686555757952-963589179051?auto=format&fit=crop&w=600&h=450&q=60"
-                       width="600" height="450" loading="lazy" decoding="async">
+                  <img class="card-img-top" src="assets/img/menu/pumpkin-soup.webp" alt="Orange pumpkin soup with spring onion, mint, coconut and chilli flakes" width="640" height="480" loading="lazy" decoding="async">
                   <div class="card-body">
-                    <div class="dish-head"><h3 class="card-title">Pink beetroot tacos</h3><span class="dish-price">36 lei</span></div>
-                    <p class="card-text">Three soft tortillas with a beetroot and chilli sauce, black beans, avocado, pickled onion and lime.</p>
-                    <ul class="dish-tags"><li>Gluten-free</li><li>Spicy</li></ul>
+                    <div class="dish-head"><h3 class="card-title">Spicy pumpkin and tomato soup</h3><span class="dish-price">24 lei</span></div>
+                    <p class="card-text">Pumpkin and tomato blended with coconut milk, ginger, cumin, coriander and a little cayenne, topped with spring onion, mint, toasted coconut and chilli flakes. Served with warm bread.</p>
+                    <ul class="dish-tags"><li>Spicy</li><li>Nut-free</li><li>Contains gluten</li><li>Gluten-free without the bread</li></ul>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <article class="card dish h-100">
+                  <img class="card-img-top" src="assets/img/menu/tofu-curry.webp" alt="Tofu in a creamy orange curry sauce over white rice with coriander and cucumber" width="640" height="480" loading="lazy" decoding="async">
+                  <div class="card-body">
+                    <div class="dish-head"><h3 class="card-title">Creamy tofu and cauliflower curry</h3><span class="dish-price">39 lei</span></div>
+                    <p class="card-text">Golden tofu and roasted cauliflower in a mild, creamy korma sauce with onion, garlic, ginger and cashews, served with basmati rice, cucumber, coconut yoghurt and fresh coriander.</p>
+                    <ul class="dish-tags"><li>Gluten-free</li><li>Contains soy</li><li>Contains cashews</li><li>Mild</li></ul>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <article class="card dish h-100">
+                  <img class="card-img-top" src="assets/img/menu/spinach-pasta.webp" alt="Two bowls of penne with spinach, tomatoes and fresh basil" width="640" height="480" loading="lazy" decoding="async">
+                  <div class="card-body">
+                    <div class="dish-head"><h3 class="card-title">Creamy spinach and artichoke pasta</h3><span class="dish-price">35 lei</span></div>
+                    <p class="card-text">Penne in a silky cashew and lemon sauce with artichoke hearts, baby spinach, shallots, garlic and cherry tomatoes, finished with basil and black pepper.</p>
+                    <ul class="dish-tags"><li>Contains gluten</li><li>Contains cashews</li><li>Gluten-free pasta on request</li></ul>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <article class="card dish h-100">
+                  <img class="card-img-top" src="assets/img/menu/stuffed-sweet-potatoes.webp" alt="Roasted sweet potato halves filled with peas, sweetcorn and melted cheese" width="640" height="480" loading="lazy" decoding="async">
+                  <div class="card-body">
+                    <div class="dish-head"><h3 class="card-title">Loaded stuffed sweet potatoes</h3><span class="dish-price">37 lei</span></div>
+                    <p class="card-text">Two roasted sweet potato halves filled with smoky plant-based strips, peas, sweetcorn, carrot and broccoli, topped with melted vegan cheddar, parsley and a spoon of smoky tomato sauce.</p>
+                    <ul class="dish-tags"><li>Contains soy</li><li>Contains gluten</li><li>Nut-free</li></ul>
                   </div>
                 </article>
               </div>
             </div>
-            <div class="more-dishes">
-              <h3>Also for dinner</h3>
-              <ul>
-                <li><span>Mushroom tocăniță with soft polenta and pickles</span><span>36 lei</span></li>
-                <li><span>Seitan skewers with oven fries and garlic sauce</span><span>39 lei</span></li>
-                <li><span>Sharing plate for two: dips, flatbread, pickles and fritters</span><span>79 lei</span></li>
-              </ul>
-              <p class="more-note">The kitchen takes its last food orders at 21:30.</p>
-            </div>
+            <p class="more-note">The kitchen takes its last food orders at 21:30.</p>
           </div>
 
           <!-- Desserts -->
-          <div class="tab-pane fade meal-pane" data-meal="dessert" id="pane-dessert" role="tabpanel" aria-labelledby="tab-dessert" tabindex="0">
+          <div class="tab-pane fade" id="pane-dessert" role="tabpanel" aria-labelledby="tab-dessert" tabindex="0">
             <div class="row g-4">
               <div class="col-md-6 col-lg-4">
                 <article class="card dish h-100">
-                  <img class="card-img-top" alt="Pieces of chocolate fudge with nuts"
-                       src="https://images.unsplash.com/photo-1600333765292-153fe874771f?auto=format&fit=crop&w=600&h=450&q=60"
-                       width="600" height="450" loading="lazy" decoding="async">
+                  <img class="card-img-top" src="assets/img/menu/cinnamon-rolls.webp" alt="Cinnamon rolls with white glaze on baking paper" width="569" height="427" loading="lazy" decoding="async">
                   <div class="card-body">
-                    <div class="dish-head"><h3 class="card-title">Chocolate hazelnut fudge</h3><span class="dish-price">18 lei</span></div>
-                    <p class="card-text">Four squares of dark chocolate fudge made with dates and roasted hazelnuts. Good with coffee.</p>
-                    <ul class="dish-tags"><li>Contains nuts</li><li>Gluten-free</li></ul>
+                    <div class="dish-head"><h3 class="card-title">Gluten-free cinnamon roll</h3><span class="dish-price">14 lei</span></div>
+                    <p class="card-text">A soft roll made with a gluten-free flour blend and almond flour, swirled with brown sugar, cinnamon and vegan butter, finished with a vanilla glaze.</p>
+                    <ul class="dish-tags"><li>Gluten-free</li><li>Contains almonds</li></ul>
                   </div>
                 </article>
               </div>
               <div class="col-md-6 col-lg-4">
                 <article class="card dish h-100">
-                  <img class="card-img-top" alt="A slice of raw caramel cake with seeds on a white plate"
-                       src="https://images.unsplash.com/photo-1530176616111-20579c47d441?auto=format&fit=crop&w=600&h=450&q=60"
-                       width="600" height="450" loading="lazy" decoding="async">
+                  <img class="card-img-top" src="assets/img/menu/apple-crisp.webp" alt="Apple crisp with an oat crumble in white ramekins, with green apples behind" width="640" height="480" loading="lazy" decoding="async">
                   <div class="card-body">
-                    <div class="dish-head"><h3 class="card-title">Raw caramel slice</h3><span class="dish-price">22 lei</span></div>
-                    <p class="card-text">A no-bake base of oats and seeds under a soft date caramel, set overnight in the fridge.</p>
-                    <ul class="dish-tags"><li>Contains cashews</li></ul>
+                    <div class="dish-head"><h3 class="card-title">Warm apple crisp</h3><span class="dish-price">22 lei</span></div>
+                    <p class="card-text">Tart and sweet apples baked with lemon, cinnamon, ginger and a pinch of nutmeg, under a crunchy oat, almond and pecan crumble. Add a scoop of vanilla oat ice cream for 6 lei.</p>
+                    <ul class="dish-tags"><li>Contains gluten</li><li>Contains almonds and pecans</li><li>Nut-free crumble on request</li></ul>
                   </div>
                 </article>
               </div>
-              <div class="col-md-6 col-lg-4 mx-md-auto">
+              <div class="col-md-6 col-lg-4">
                 <article class="card dish h-100">
-                  <img class="card-img-top" alt="A pecan tart next to a latte on a wooden table"
-                       src="https://images.unsplash.com/photo-1767065584025-b1c5ecfbffbb?auto=format&fit=crop&w=600&h=450&q=60"
-                       width="600" height="450" loading="lazy" decoding="async">
+                  <img class="card-img-top" src="assets/img/menu/ganache-tart.webp" alt="A slice of dark chocolate tart topped with berries" width="640" height="480" loading="lazy" decoding="async">
                   <div class="card-body">
-                    <div class="dish-head"><h3 class="card-title">Maple pecan tart</h3><span class="dish-price">24 lei</span></div>
-                    <p class="card-text">Crisp pastry filled with maple syrup and toasted pecans. Ask for a scoop of oat ice cream on the side.</p>
-                    <ul class="dish-tags"><li>Contains nuts</li><li>Contains gluten</li></ul>
+                    <div class="dish-head"><h3 class="card-title">Raspberry chocolate ganache tart</h3><span class="dish-price">24 lei</span></div>
+                    <p class="card-text">A date, pecan and cocoa crust with a layer of raspberry chia jam and a silky dark chocolate and cashew ganache, topped with fresh berries.</p>
+                    <ul class="dish-tags"><li>Gluten-free</li><li>Contains pecans and cashews</li></ul>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <article class="card dish h-100">
+                  <img class="card-img-top" src="assets/img/menu/blueberry-scones.webp" alt="Blueberry scones with lemon glaze on a cooling rack" width="640" height="480" loading="lazy" decoding="async">
+                  <div class="card-body">
+                    <div class="dish-head"><h3 class="card-title">Blueberry lemon scone</h3><span class="dish-price">15 lei</span></div>
+                    <p class="card-text">A gluten-free scone made with almond and oat flour, wild blueberries and a little rosemary, drizzled with lemon glaze and zest.</p>
+                    <ul class="dish-tags"><li>Gluten-free</li><li>Contains almonds</li></ul>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <article class="card dish h-100">
+                  <img class="card-img-top" src="assets/img/menu/strawberry-shortcake.webp" alt="A strawberry shortcake on a pale green cake stand" width="640" height="480" loading="lazy" decoding="async">
+                  <div class="card-body">
+                    <div class="dish-head"><h3 class="card-title">Strawberry shortcake</h3><span class="dish-price">22 lei</span></div>
+                    <p class="card-text">A tender gluten-free shortcake made with coconut buttermilk and almond flour, layered with fresh strawberries and coconut whipped cream.</p>
+                    <ul class="dish-tags"><li>Gluten-free</li><li>Contains almonds</li><li>Contains coconut</li></ul>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <article class="card dish h-100">
+                  <img class="card-img-top" src="assets/img/menu/tiramisu.webp" alt="Tiramisu in a glass, dusted with cocoa and topped with a raspberry, a blackberry and mint" width="640" height="480" loading="lazy" decoding="async">
+                  <div class="card-body">
+                    <div class="dish-head"><h3 class="card-title">Tiramisu pudding cup</h3><span class="dish-price">20 lei</span></div>
+                    <p class="card-text">A creamy cashew and coconut pudding flavoured with coffee and vanilla, layered with dark chocolate ganache, dusted with cocoa and topped with a raspberry, a blackberry and fresh mint.</p>
+                    <ul class="dish-tags"><li>Gluten-free</li><li>Contains cashews</li><li>Contains caffeine</li><li>Decaf on request</li></ul>
                   </div>
                 </article>
               </div>
@@ -405,58 +503,98 @@
             <div class="more-dishes">
               <h3>Also for dessert</h3>
               <ul>
-                <li><span>Papanași with sour cherry jam and coconut cream</span><span>26 lei</span></li>
-                <li><span>Carrot cupcake with lemon frosting</span><span>15 lei</span></li>
-                <li><span>Two scoops of sorbet, flavours change daily</span><span>14 lei</span></li>
+                <li><span>Two scoops of sorbet, flavours change daily, nut-free</span><span>14 lei</span></li>
               </ul>
             </div>
           </div>
 
           <!-- Drinks -->
-          <div class="tab-pane fade meal-pane" data-meal="drinks" id="pane-drinks" role="tabpanel" aria-labelledby="tab-drinks" tabindex="0">
+          <div class="tab-pane fade" id="pane-drinks" role="tabpanel" aria-labelledby="tab-drinks" tabindex="0">
             <div class="row g-4">
               <div class="col-md-6 col-lg-4">
-                <article class="card dish h-100">
-                  <img class="card-img-top" alt="A glass of lemonade with ice and mint on a yellow background"
-                       src="https://images.unsplash.com/photo-1623157980612-da2c2cdb4c0b?auto=format&fit=crop&w=600&h=450&q=60"
-                       width="600" height="450" loading="lazy" decoding="async">
+                <article class="card dish drink h-100">
+                  <img class="card-img-top" src="assets/img/menu/smoothies.webp" alt="Two berry smoothies topped with strawberries and blueberries" width="640" height="480" loading="lazy" decoding="async">
                   <div class="card-body">
-                    <div class="dish-head"><h3 class="card-title">House lemonade</h3><span class="dish-price">15 lei</span></div>
-                    <p class="card-text">Squeezed every morning with fresh mint and just enough cane sugar. A one-litre jug is 39 lei.</p>
+                    <h3 class="card-title">Smoothies</h3>
+                    <ul class="price-list">
+                      <li><span>Berry blast<small>strawberry, blueberry, banana, oat milk</small></span><span>21 lei</span></li>
+                      <li><span>Tropical mango<small>mango, pineapple, banana, coconut water</small></span><span>21 lei</span></li>
+                      <li><span>Peanut butter &amp; cacao<small>banana, peanut butter, cacao, oat milk</small></span><span>22 lei</span></li>
+                    </ul>
+                    <p class="drink-note">The peanut butter &amp; cacao smoothie contains peanuts.</p>
                   </div>
                 </article>
               </div>
               <div class="col-md-6 col-lg-4">
-                <article class="card dish h-100">
-                  <img class="card-img-top" alt="A green smoothie with avocado, lime and spinach"
-                       src="https://images.unsplash.com/photo-1759006249055-8c4030a2d56a?auto=format&fit=crop&w=600&h=450&q=60"
-                       width="600" height="450" loading="lazy" decoding="async">
+                <article class="card dish drink h-100">
+                  <img class="card-img-top" src="assets/img/menu/lemonades.webp" alt="A glass of sparkling lemonade with rosemary on a sunny table" width="640" height="480" loading="lazy" decoding="async">
                   <div class="card-body">
-                    <div class="dish-head"><h3 class="card-title">Green smoothie</h3><span class="dish-price">21 lei</span></div>
-                    <p class="card-text">Avocado, spinach, banana, lime and a spoon of matcha, blended with oat milk.</p>
+                    <h3 class="card-title">Lemonades</h3>
+                    <ul class="price-list">
+                      <li><span>Sparkling rosemary lemonade</span><span>15 lei</span></li>
+                      <li><span>Raspberry &amp; basil lemonade</span><span>17 lei</span></li>
+                      <li><span>Ginger &amp; cucumber lemonade</span><span>17 lei</span></li>
+                    </ul>
+                    <p class="drink-note">Any lemonade as a 1-litre jug for 39 lei.</p>
                   </div>
                 </article>
               </div>
-              <div class="col-md-6 col-lg-4 mx-md-auto">
-                <article class="card dish h-100">
-                  <img class="card-img-top" alt="A cup of latte with latte art"
-                       src="https://images.unsplash.com/photo-1660229496744-1c772fabc06a?auto=format&fit=crop&w=600&h=450&q=60"
-                       width="600" height="450" loading="lazy" decoding="async">
+              <div class="col-md-6 col-lg-4">
+                <article class="card dish drink h-100">
+                  <img class="card-img-top" src="assets/img/menu/tea.webp" alt="A clay teapot, a glass pitcher and a cup of tea on a wooden tea tray" width="640" height="480" loading="lazy" decoding="async">
                   <div class="card-body">
-                    <div class="dish-head"><h3 class="card-title">Oat flat white</h3><span class="dish-price">14 lei</span></div>
-                    <p class="card-text">A double shot of espresso roasted in Cluj, with steamed oat milk. Soy and almond milk at no extra cost.</p>
+                    <h3 class="card-title">Tea<small> served in a pot for one</small></h3>
+                    <ul class="price-list">
+                      <li><span>Black tea with orange peel</span><span>11 lei</span></li>
+                      <li><span>Japanese sencha green tea</span><span>12 lei</span></li>
+                      <li><span>Mountain herbal<small>linden flower, mint and chamomile</small></span><span>10 lei</span></li>
+                    </ul>
+                    <p class="drink-note">Black and green tea contain caffeine. The herbal tea is caffeine-free.</p>
                   </div>
                 </article>
               </div>
-            </div>
-            <div class="more-dishes">
-              <h3>Also to drink</h3>
-              <ul>
-                <li><span>Filter coffee, refilled for free at breakfast</span><span>9 lei</span></li>
-                <li><span>Black, green or herbal tea</span><span>10 lei</span></li>
-                <li><span>Pressed apple juice from Feleacu</span><span>12 lei</span></li>
-                <li><span>Kombucha of the week</span><span>16 lei</span></li>
-              </ul>
+              <div class="col-md-6 col-lg-4">
+                <article class="card dish drink h-100">
+                  <img class="card-img-top" src="assets/img/menu/coffee.webp" alt="Three lattes with latte art among potted plants" width="640" height="480" loading="lazy" decoding="async">
+                  <div class="card-body">
+                    <h3 class="card-title">Coffee</h3>
+                    <ul class="price-list">
+                      <li><span>Espresso or americano</span><span>9 lei</span></li>
+                      <li><span>Oat flat white</span><span>14 lei</span></li>
+                      <li><span>Cinnamon oat latte</span><span>16 lei</span></li>
+                    </ul>
+                    <p class="drink-note">Oat, soy or almond milk at no extra cost. Decaf on request.</p>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <article class="card dish drink h-100">
+                  <img class="card-img-top" src="assets/img/menu/juices.webp" alt="A tall glass of orange juice with an orange slice" width="640" height="480" loading="lazy" decoding="async">
+                  <div class="card-body">
+                    <h3 class="card-title">Cold-pressed juices<small> 300 ml, pressed every morning</small></h3>
+                    <ul class="price-list">
+                      <li><span>Orange, carrot &amp; ginger</span><span>16 lei</span></li>
+                      <li><span>Apple, beetroot &amp; lemon</span><span>16 lei</span></li>
+                      <li><span>Green<small>apple, cucumber, celery and spinach</small></span><span>17 lei</span></li>
+                    </ul>
+                    <p class="drink-note">The green juice contains celery.</p>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <article class="card dish drink h-100">
+                  <img class="card-img-top" src="assets/img/menu/matcha.webp" alt="An iced matcha latte in a glass on a wooden counter" width="640" height="480" loading="lazy" decoding="async">
+                  <div class="card-body">
+                    <h3 class="card-title">Matcha</h3>
+                    <ul class="price-list">
+                      <li><span>Iced matcha latte with oat milk</span><span>18 lei</span></li>
+                      <li><span>Hot vanilla matcha latte</span><span>18 lei</span></li>
+                      <li><span>Strawberry matcha<small>matcha over strawberry purée and oat milk</small></span><span>20 lei</span></li>
+                    </ul>
+                    <p class="drink-note">All matcha drinks contain caffeine.</p>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
         </div>
@@ -464,14 +602,14 @@
     </section>
 
     <!-- ============ Lunch of the day: carousel ============ -->
-    <section id="lunch" class="section section-pumpkin">
+    <section id="lunch" class="section section-palm">
       <div class="container">
         <div class="row gx-lg-5 gy-4 align-items-end section-head">
           <div class="col-lg-6">
             <h2 class="section-title">This week&rsquo;s lunch of the day</h2>
           </div>
           <div class="col-lg-6">
-            <p class="section-intro">Soup and a main for 35 lei, Monday to Friday from 12:00 until it runs out. At the weekend we cook from the full menu.</p>
+            <p class="section-intro">Romanian home cooking, made with plants. Soup and a main for 35 lei, Monday to Friday from 12:00 until it runs out. At the weekend we cook from the full menu.</p>
           </div>
         </div>
 
@@ -486,10 +624,10 @@
             </div>
             <div class="carousel-arrows">
               <button class="arrow-btn" type="button" data-bs-target="#lunchCarousel" data-bs-slide="prev" aria-label="Previous day">
-                <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4 6.5 10l6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4 6.5 10l6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
               <button class="arrow-btn" type="button" data-bs-target="#lunchCarousel" data-bs-slide="next" aria-label="Next day">
-                <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="m7.5 4 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="m7.5 4 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
             </div>
           </div>
@@ -497,16 +635,15 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="row g-0">
-                <div class="col-lg-7"><img class="slide-photo" alt="A bowl of soup with a spoon"
-                     src="https://images.unsplash.com/photo-1652088079703-38f4a8d6b981?auto=format&fit=crop&w=900&h=620&q=60"
-                     width="900" height="620" loading="lazy" decoding="async"></div>
-                <div class="col-lg-5">
+                <div class="col-md-6 col-lg-5"><img class="slide-photo" src="assets/img/lunch/mon.webp" alt="Sautéed chanterelle mushrooms with parsley on a thick slice of toasted bread" width="427" height="427" loading="lazy" decoding="async"></div>
+                <div class="col-md-6 col-lg-7">
                   <div class="slide-text">
                     <p class="slide-day">Monday</p>
                     <dl class="lunch-list">
-                      <dt>Soup</dt><dd>Red lentil soup with lemon and cumin</dd>
-                      <dt>Main</dt><dd>Mushroom tocăniță with soft polenta and pickled cucumbers</dd>
+                      <dt>Soup</dt><dd>Vegetable ciorbă with lovage</dd>
+                      <dt>Main</dt><dd>Mushroom tocăniță: chanterelles slow-cooked with garlic and parsley, on thick toasted country bread</dd>
                     </dl>
+                    <p class="slide-tags">Contains gluten</p>
                     <p class="slide-price">35 lei</p>
                   </div>
                 </div>
@@ -515,16 +652,15 @@
 
             <div class="carousel-item">
               <div class="row g-0">
-                <div class="col-lg-7"><img class="slide-photo" alt="A salad of purple and green leaves in a black bowl"
-                     src="https://images.unsplash.com/photo-1503146234394-631200675614?auto=format&fit=crop&w=900&h=620&q=60"
-                     width="900" height="620" loading="lazy" decoding="async"></div>
-                <div class="col-lg-5">
+                <div class="col-md-6 col-lg-5"><img class="slide-photo" src="assets/img/lunch/tue.webp" alt="A roasted red pepper stuffed with rice and herbs on a white sauce" width="640" height="640" loading="lazy" decoding="async"></div>
+                <div class="col-md-6 col-lg-7">
                   <div class="slide-text">
                     <p class="slide-day">Tuesday</p>
                     <dl class="lunch-list">
-                      <dt>Soup</dt><dd>Green pea soup with mint</dd>
-                      <dt>Main</dt><dd>Red cabbage and lentil salad with walnuts and roast potatoes</dd>
+                      <dt>Soup</dt><dd>Creamy green pea soup</dd>
+                      <dt>Main</dt><dd>Ardei umpluți: a roasted red pepper stuffed with rice and vegetables, on a cool garlic and coconut yoghurt sauce</dd>
                     </dl>
+                    <p class="slide-tags">Gluten-free, nut-free</p>
                     <p class="slide-price">35 lei</p>
                   </div>
                 </div>
@@ -533,16 +669,15 @@
 
             <div class="carousel-item">
               <div class="row g-0">
-                <div class="col-lg-7"><img class="slide-photo" alt="Vegan skewers with french fries on a white plate"
-                     src="https://images.unsplash.com/photo-1740591872076-ab39ee7edb4a?auto=format&fit=crop&w=900&h=620&q=60"
-                     width="900" height="620" loading="lazy" decoding="async"></div>
-                <div class="col-lg-5">
+                <div class="col-md-6 col-lg-5"><img class="slide-photo" src="assets/img/lunch/wed.webp" alt="Crispy golden rolls with chilli and spring onion on a white plate" width="427" height="427" loading="lazy" decoding="async"></div>
+                <div class="col-md-6 col-lg-7">
                   <div class="slide-text">
                     <p class="slide-day">Wednesday</p>
                     <dl class="lunch-list">
-                      <dt>Soup</dt><dd>Bean ciorbă with smoked paprika and lovage</dd>
-                      <dt>Main</dt><dd>Seitan skewers with oven fries and garlic sauce</dd>
+                      <dt>Soup</dt><dd>Potato and dill ciorbă</dd>
+                      <dt>Main</dt><dd>Crispy sarmale rolls: cabbage and mushroom rolls fried until golden, with a sweet chilli glaze and pickled radish</dd>
                     </dl>
+                    <p class="slide-tags">Contains gluten, contains soy</p>
                     <p class="slide-price">35 lei</p>
                   </div>
                 </div>
@@ -551,16 +686,15 @@
 
             <div class="carousel-item">
               <div class="row g-0">
-                <div class="col-lg-7"><img class="slide-photo" alt="A blue bowl of quinoa, kale, fruit and pistachios"
-                     src="https://images.unsplash.com/photo-1623428188474-b1d532c5e560?auto=format&fit=crop&w=900&h=620&q=60"
-                     width="900" height="620" loading="lazy" decoding="async"></div>
-                <div class="col-lg-5">
+                <div class="col-md-6 col-lg-5"><img class="slide-photo" src="assets/img/lunch/thu.webp" alt="A bowl of whipped white beans with paprika oil and two pieces of toast" width="640" height="640" loading="lazy" decoding="async"></div>
+                <div class="col-md-6 col-lg-7">
                   <div class="slide-text">
                     <p class="slide-day">Thursday</p>
                     <dl class="lunch-list">
-                      <dt>Soup</dt><dd>Roast tomato and pepper soup</dd>
-                      <dt>Main</dt><dd>Quinoa and kale bowl with fruit, pistachios and a lemon dressing</dd>
+                      <dt>Soup</dt><dd>Roasted tomato soup</dd>
+                      <dt>Main</dt><dd>Fasole bătută: whipped white beans with paprika oil and dried herbs, with crunchy toast</dd>
                     </dl>
+                    <p class="slide-tags">Contains gluten, gluten-free without the toast</p>
                     <p class="slide-price">35 lei</p>
                   </div>
                 </div>
@@ -569,16 +703,15 @@
 
             <div class="carousel-item">
               <div class="row g-0">
-                <div class="col-lg-7"><img class="slide-photo" alt="A bowl of rice with kimchi and chopsticks"
-                     src="https://images.unsplash.com/photo-1698489857683-0d30f7f046f7?auto=format&fit=crop&w=900&h=620&q=60"
-                     width="900" height="620" loading="lazy" decoding="async"></div>
-                <div class="col-lg-5">
+                <div class="col-md-6 col-lg-5"><img class="slide-photo" src="assets/img/lunch/fri.webp" alt="Vegetables baked in a clay pot with broccoli, peppers and cashews" width="640" height="640" loading="lazy" decoding="async"></div>
+                <div class="col-md-6 col-lg-7">
                   <div class="slide-text">
                     <p class="slide-day">Friday</p>
                     <dl class="lunch-list">
-                      <dt>Soup</dt><dd>Miso broth with noodles and spring onion</dd>
-                      <dt>Main</dt><dd>Kimchi fried rice with crispy tofu and sesame</dd>
+                      <dt>Soup</dt><dd>Red lentil soup</dd>
+                      <dt>Main</dt><dd>Ghiveci la cuptor: vegetables baked in a clay pot with broccoli, peppers and toasted cashews</dd>
                     </dl>
+                    <p class="slide-tags">Gluten-free, contains cashews</p>
                     <p class="slide-price">35 lei</p>
                   </div>
                 </div>
@@ -586,7 +719,7 @@
             </div>
           </div>
         </div>
-        <p class="lunch-note" id="lunchNote">Select a day to see what&rsquo;s cooking.</p>
+        <p class="lunch-note" id="lunchNote">Choose a day to see what&rsquo;s cooking.</p>
       </div>
     </section>
 
@@ -598,71 +731,53 @@
             <h2 class="section-title">A look inside</h2>
           </div>
           <div class="col-lg-6">
-            <p class="section-intro">Long shared tables, plenty of daylight and a kitchen you can see from the counter. Select a photo to see it larger.</p>
+            <p class="section-intro">Wooden tables, plenty of plants and warm light from morning to night. Select a photo to see it larger.</p>
           </div>
         </div>
 
         <div class="gallery-grid">
-          <a class="gallery-item g-wide" data-caption="Long tables by the window, where strangers end up passing each other the bread"
-             href="https://images.unsplash.com/photo-1456078003870-929d5986f0f5?auto=format&fit=max&w=1600&q=70">
-            <img alt="Two people sitting on a bench in a bright white café with plants and produce"
-                 src="https://images.unsplash.com/photo-1456078003870-929d5986f0f5?auto=format&fit=crop&w=900&h=600&q=60"
-                 width="900" height="600" loading="lazy" decoding="async">
+          <a class="gallery-item g-wide" href="assets/img/gallery/counter.webp" data-caption="The counter under the glass roof, where we make the coffee and juices">
+            <img src="assets/img/gallery/counter-thumb.webp" alt="A café counter under a glass roof, with hanging plants, wicker lamps and wooden tables" width="960" height="640" loading="lazy" decoding="async">
           </a>
-          <a class="gallery-item" data-caption="Our avocado toast, the most ordered breakfast"
-             href="https://images.unsplash.com/photo-1662885736539-d69963254080?auto=format&fit=max&w=1600&q=70">
-            <img alt="Avocado toast with tomatoes and lemon"
-                 src="https://images.unsplash.com/photo-1662885736539-d69963254080?auto=format&fit=crop&w=600&h=600&q=60"
-                 width="600" height="600" loading="lazy" decoding="async">
+          <a class="gallery-item" href="assets/img/gallery/window.webp" data-caption="Window tables by the street, the quietest seats in the evening">
+            <img src="assets/img/gallery/window-thumb.webp" alt="Wooden tables by a window with hanging plants and warm bulbs" width="427" height="427" loading="lazy" decoding="async">
           </a>
-          <a class="gallery-item" data-caption="Finishing a dessert plate at the pass"
-             href="https://images.unsplash.com/photo-1528713066454-eb7d78a98ce0?auto=format&fit=max&w=1600&q=70">
-            <img alt="A cook garnishing dessert plates"
-                 src="https://images.unsplash.com/photo-1528713066454-eb7d78a98ce0?auto=format&fit=crop&w=600&h=600&q=60"
-                 width="600" height="600" loading="lazy" decoding="async">
+          <a class="gallery-item" href="assets/img/gallery/terrace.webp" data-caption="The terrace on a summer evening">
+            <img src="assets/img/gallery/terrace-thumb.webp" alt="People eating on a terrace surrounded by plants, with lanterns behind the glass" width="600" height="600" loading="lazy" decoding="async">
           </a>
-          <a class="gallery-item" data-caption="The plant corner by the coffee bar"
-             href="https://images.unsplash.com/photo-1709193114557-f63b46db48da?auto=format&fit=max&w=1600&q=70">
-            <img alt="A café corner full of green plants against a white wall"
-                 src="https://images.unsplash.com/photo-1709193114557-f63b46db48da?auto=format&fit=crop&w=600&h=600&q=60"
-                 width="600" height="600" loading="lazy" decoding="async">
+          <a class="gallery-item" href="assets/img/gallery/morning.webp" data-caption="Morning light through the big windows">
+            <img src="assets/img/gallery/morning-thumb.webp" alt="A bright café with plants, round lamps and large windows" width="427" height="427" loading="lazy" decoding="async">
           </a>
-          <a class="gallery-item" data-caption="Granola, baked fresh every Monday"
-             href="https://images.unsplash.com/photo-1648663939291-f99c10f3f76d?auto=format&fit=max&w=1600&q=70">
-            <img alt="A granola bowl seen from above"
-                 src="https://images.unsplash.com/photo-1648663939291-f99c10f3f76d?auto=format&fit=crop&w=600&h=600&q=60"
-                 width="600" height="600" loading="lazy" decoding="async">
+          <a class="gallery-item" href="assets/img/gallery/bar.webp" data-caption="Late afternoon at the bar, before the dinner rush">
+            <img src="assets/img/gallery/bar-thumb.webp" alt="A quiet bar with tiled walls and afternoon light" width="598" height="598" loading="lazy" decoding="async">
           </a>
-          <a class="gallery-item g-wide" data-caption="Friday evening, when the whole table orders to share"
-             href="https://images.unsplash.com/photo-1675150277436-9c7348972c11?auto=format&fit=max&w=1600&q=70">
-            <img alt="A wooden table covered with plates of vegan food"
-                 src="https://images.unsplash.com/photo-1675150277436-9c7348972c11?auto=format&fit=crop&w=900&h=600&q=60"
-                 width="900" height="600" loading="lazy" decoding="async">
+          <a class="gallery-item g-wide" href="assets/img/gallery/lamps.webp" data-caption="Lunchtime under the wicker lamps">
+            <img src="assets/img/gallery/lamps-thumb.webp" alt="Guests at tables under wicker pendant lamps and hanging greenery" width="640" height="427" loading="lazy" decoding="async">
           </a>
         </div>
       </div>
     </section>
 
-    <!-- ============ Testimonials ============ -->
-    <section id="reviews" class="section section-blush">
+    <!-- ============ Reviews ============ -->
+    <section id="reviews" class="section section-deep">
       <div class="container">
         <h2 class="section-title section-title-solo">What our guests say</h2>
         <div class="row g-4">
           <div class="col-lg-4">
             <figure class="quote">
-              <blockquote><p>I came for my sister&rsquo;s birthday expecting a sad salad. I ordered the burger, then ordered it again to take home.</p></blockquote>
+              <blockquote><p>My brother dragged me here for his birthday. I eat meat, and I&rsquo;ve been back three times for the Garden burger with sweet potato fries.</p></blockquote>
               <figcaption><strong>Radu</strong>, eats meat, comes back anyway</figcaption>
             </figure>
           </div>
           <div class="col-lg-4">
             <figure class="quote">
-              <blockquote><p>Soup and a main for 35 lei got me through the whole exam session. The Wednesday ciorbă is the best one.</p></blockquote>
+              <blockquote><p>The 35 lei lunch got me through exam season. The crispy sarmale on Wednesday taste just like my grandmother&rsquo;s, only crunchier.</p></blockquote>
               <figcaption><strong>Ioana</strong>, student, lunch regular</figcaption>
             </figure>
           </div>
           <div class="col-lg-4">
             <figure class="quote">
-              <blockquote><p>My son is allergic to nuts. The waiter checked every dish with the kitchen before we ordered, and we never felt like a bother.</p></blockquote>
+              <blockquote><p>My son is allergic to nuts. The waiter checked every dish with the kitchen, and they made his apple crisp without the nut crumble.</p></blockquote>
               <figcaption><strong>Maria</strong>, mother of two</figcaption>
             </figure>
           </div>
@@ -676,11 +791,11 @@
         <div class="row gx-lg-5 gy-5">
           <div class="col-lg-5">
             <h2 class="section-title">Come and eat</h2>
-            <p>You can walk in at any time. For groups of six or more, or for Friday and Saturday dinner, call us and we&rsquo;ll keep a table for you. We also pack any dish to take away.</p>
+            <p class="visit-intro">You can walk in at any time. For groups of six or more, or for Friday and Saturday dinner, call us and we&rsquo;ll keep a table for you. We also pack any dish to take away.</p>
 
             <div class="d-flex flex-wrap gap-3 visit-actions">
-              <a class="btn btn-pumpkin btn-lg" href="tel:+40264450921">Call&nbsp;to&nbsp;book</a>
-              <a class="btn btn-ink-outline btn-lg" href="mailto:hello@bostancluj.ro?subject=Table%20booking">Email us</a>
+              <a class="btn btn-orange btn-lg" href="tel:+40264450921">Call&nbsp;to&nbsp;book</a>
+              <a class="btn btn-outline-forest btn-lg" href="mailto:hello@gardentablecluj.ro?subject=Table%20booking">Email us</a>
             </div>
 
             <ul class="visit-list">
@@ -688,20 +803,20 @@
                 <svg width="20" height="20" fill="currentColor" aria-hidden="true"><use href="#i-clock"/></svg>
                 <div>
                   <strong>Every day, 8:00 to 22:00</strong>
-                  <span>Breakfast 8:00 to 11:30, lunch 12:00 to 16:00, dinner 17:00 to 22:00. Coffee and desserts all day.</span>
+                  <span>Breakfast 8:00 to 11:30, lunch 12:00 to 16:00, dinner 17:00 to 22:00. Desserts and drinks all day.</span>
                 </div>
               </li>
               <li>
                 <svg width="20" height="20" fill="currentColor" aria-hidden="true"><use href="#i-pin"/></svg>
                 <div>
                   <strong>Strada Moților 41, Cluj-Napoca</strong>
-                  <span>Ten minutes on foot from the city centre. Buses stop just around the corner.</span>
+                  <span>Ten minutes on foot from the city centre, with a bus stop just around the corner.</span>
                 </div>
               </li>
             </ul>
           </div>
 
-          <div class="col-lg-7">
+          <div class="col-lg-7 map-col">
             <div class="map-frame" id="mapFrame"
                  data-src="https://www.google.com/maps?q=Strada+Mo%C8%9Bilor+41,+Cluj-Napoca,+Romania&z=16&output=embed"></div>
             <p class="map-link"><a href="https://www.google.com/maps?q=Strada+Mo%C8%9Bilor+41,+Cluj-Napoca,+Romania" target="_blank" rel="noopener">Open in Google Maps</a></p>
@@ -711,7 +826,7 @@
         <div class="row gx-lg-5 gy-4 faq">
           <div class="col-lg-5">
             <h2 class="section-title">Good to know</h2>
-            <p class="section-intro">The questions we hear most often at the counter.</p>
+            <p class="section-intro faq-intro">The questions we hear most often at the counter.</p>
           </div>
           <div class="col-lg-7">
             <div class="accordion" id="faqList">
@@ -720,7 +835,7 @@
                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">Is everything really vegan?</button>
                 </h3>
                 <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqList">
-                  <div class="accordion-body">Yes. There is no meat, fish, dairy, egg or honey in anything we serve. We also choose wine and beer that are made without animal products in the filtering.</div>
+                  <div class="accordion-body">Yes. There is no meat, fish, dairy, egg or honey in anything we serve. When a dish looks like the original, like the meatballs in our lentil soup or the egg in the breakfast croissant, it&rsquo;s made from plants.</div>
                 </div>
               </div>
               <div class="accordion-item">
@@ -728,7 +843,7 @@
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">Can you cook gluten-free or nut-free?</button>
                 </h3>
                 <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqList">
-                  <div class="accordion-body">Many dishes are gluten-free or can be made so, and every dish on the menu lists its allergens. Our kitchen also handles wheat and nuts, so if you have a severe allergy, tell us when you order and we&rsquo;ll go through the options with you.</div>
+                  <div class="accordion-body">Every dish on the menu lists its allergens, and many are gluten-free or can be made so. Several desserts are made with nuts, and our kitchen also handles wheat, so if you have a severe allergy, tell us when you order and we&rsquo;ll go through the options with you.</div>
                 </div>
               </div>
               <div class="accordion-item">
@@ -767,11 +882,14 @@
     <div class="container">
       <div class="row gy-5">
         <div class="col-lg-4">
-          <a class="brand brand-footer" href="#top" aria-label="Bostan, back to top">
-            <svg class="brand-mark" width="40" height="40" aria-hidden="true"><use href="#logo"/></svg>
-            <span class="brand-name">Bostan</span>
+          <a class="brand brand-footer" href="#top" aria-label="Garden Table, back to top">
+            <svg class="brand-mark" width="54" height="36" aria-hidden="true"><use href="#logo"/></svg>
+            <span class="brand-text">
+              <span class="brand-name">Garden Table</span>
+              <span class="brand-tag">Vegan Kitchen</span>
+            </span>
           </a>
-          <p class="footer-line">Vegan breakfast, lunch and dinner in Cluj-Napoca, every day of the week.</p>
+          <p class="footer-line">Plant-based breakfast, lunch and dinner in Cluj-Napoca, every day of the week.</p>
         </div>
 
         <div class="col-sm-6 col-lg-4">
@@ -779,7 +897,7 @@
           <ul class="footer-list">
             <li><svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#i-pin"/></svg><address>Strada Moților 41, Cluj-Napoca, Romania</address></li>
             <li><svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+40264450921">0264&nbsp;450&nbsp;921</a></li>
-            <li><svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:hello@bostancluj.ro">hello@bostancluj.ro</a></li>
+            <li><svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:hello@gardentablecluj.ro">hello@gardentablecluj.ro</a></li>
             <li><svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#i-clock"/></svg><span>Every day, 8:00 to 22:00</span></li>
           </ul>
         </div>
@@ -788,16 +906,16 @@
           <h2 class="footer-title">Follow us</h2>
           <p class="footer-small">The lunch of the day goes up on our stories every morning at 11:00.</p>
           <ul class="social">
-            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Bostan on Instagram"><svg width="20" height="20" fill="currentColor" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
-            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Bostan on Facebook"><svg width="20" height="20" fill="currentColor" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
-            <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="Bostan on TikTok"><svg width="20" height="20" fill="currentColor" aria-hidden="true"><use href="#i-tiktok"/></svg></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Garden Table on Instagram"><svg width="20" height="20" fill="currentColor" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Garden Table on Facebook"><svg width="20" height="20" fill="currentColor" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+            <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="Garden Table on TikTok"><svg width="20" height="20" fill="currentColor" aria-hidden="true"><use href="#i-tiktok"/></svg></a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-base">
-        <p>&copy; <span id="year">2026</span> Bostan. A fictional restaurant created as a student web design project.</p>
-        <p>Photographs from <a href="https://unsplash.com/license" target="_blank" rel="noopener">Unsplash</a>, free to use under the Unsplash License, by Nadine Primeau, Victoria Nazaruk, Brigitta Baranyi, Bakd&amp;Raw by Karolin Baitinger, Ruth Georgiev, The Matter of Food, Kevin McCutcheon, Karthik B K, Stephanie Sarlos, Dan Clear, Milada Vigerova, Diego Arenas de Rodrigo, Victoria Shes, Stephen Farnworth, Hannah Reid, Alex Bayev, Monika Grabkowska, Daniel Dan, Sonny Mauricio, Frames For Your Heart, Bethany Newman, Tangerine Newt, Jose Fabula, Ray Albrow and Alexandra Tran.</p>
+        <p>&copy; <span id="year">2026</span> Garden Table. A fictional restaurant created as a student web design project.</p>
+        <p>Photographs from <a href="https://unsplash.com/license" target="_blank" rel="noopener">Unsplash</a>, free to use under the Unsplash License, by Nico Ruzin, Brigitta Baranyi, Adalia Botha, Gaby Yerden, Susan Wilkinson, Jaqueline Pelzer, Svitlana, Max Griss, Lindsay Moe, Yogesh Rahamatkar, Elena Leya, Ella Olsson, Thomas Wavid Johns, Bao Menglong, sorin popa, charlesdeluvio, Frédéric Dupont, The Fry Family Food Co., Anita Austvika, Diliara Garifullina, Ari Agustian, sheri silver, Heather Barnes, Laura Peruchi, Sara Cervera, Wesley Shen, Sergey N, Nathan Dumlao, Abhishek Hajare, Olena Bohovyk, Sofia Holmberg, You Le, Shreyak Singh, Markus Spiske, Ruben Ramirez, Hyoungju Lee, Jonny Gios, Kaja Sariwating, Maxim Tolchinskiy and Haberdoedas.</p>
       </div>
     </div>
   </footer>

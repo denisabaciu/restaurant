@@ -1,4 +1,4 @@
-/* Bostan — small behaviours on top of Bootstrap 5.3 (no other libraries) */
+/* Garden Table — small behaviours on top of Bootstrap 5.3 (no other libraries) */
 (function () {
   'use strict';
 
@@ -54,19 +54,19 @@
   function servingAt(minutes) {
     var h = function (hh, mm) { return hh * 60 + (mm || 0); };
     if (minutes < h(8) || minutes >= h(22)) {
-      return { meal: 'breakfast', closed: true, label: 'Closed now', title: 'See you at 8:00', until: 'Breakfast starts at 8:00', pill: 'Next' };
+      return { meal: 'breakfast', closed: true, label: 'Closed now', title: 'Back at 8:00', until: 'with breakfast', pill: 'Next' };
     }
     if (minutes < h(11, 30)) { return { meal: 'breakfast', label: 'Now serving', title: 'Breakfast', until: 'until 11:30', pill: 'Now' }; }
-    if (minutes < h(12)) { return { meal: 'dessert', label: 'Now serving', title: 'Coffee and cake', until: 'Lunch starts at 12:00', pill: 'Now' }; }
+    if (minutes < h(12)) { return { meal: 'dessert', label: 'Now serving', title: 'Coffee &amp; cake', until: 'lunch from 12:00', pill: 'Now' }; }
     if (minutes < h(16)) { return { meal: 'lunch', label: 'Now serving', title: 'Lunch', until: 'until 16:00', pill: 'Now' }; }
-    if (minutes < h(17)) { return { meal: 'dessert', label: 'Now serving', title: 'Coffee and cake', until: 'Dinner starts at 17:00', pill: 'Now' }; }
+    if (minutes < h(17)) { return { meal: 'dessert', label: 'Now serving', title: 'Coffee &amp; cake', until: 'dinner from 17:00', pill: 'Now' }; }
     return { meal: 'dinner', label: 'Now serving', title: 'Dinner', until: 'last orders 21:30', pill: 'Now' };
   }
 
   var now = null;
   try { now = clujNow(); } catch (e) { now = null; }
 
-  /* ---------- "Now serving" sticker and the menu tab that opens first ---------- */
+  /* ---------- "Now serving" stamp and the menu tab that opens first ---------- */
   var tabStrip = document.getElementById('mealTabs');
   function showMealTab(meal) {
     var tab = document.getElementById('tab-' + meal);
@@ -80,13 +80,12 @@
 
   if (now) {
     var serving = servingAt(now.minutes);
-    var tag = document.getElementById('nowTag');
-    tag.querySelector('.now-label').textContent = serving.label;
-    document.getElementById('nowMeal').textContent = serving.title;
+    var stamp = document.getElementById('nowStamp');
+    document.getElementById('nowLabel').textContent = serving.label;
+    document.getElementById('nowMeal').innerHTML = serving.title;
     document.getElementById('nowUntil').textContent = serving.until;
-    if (!serving.closed) { tag.setAttribute('data-meal', serving.meal); }
-    tag.setAttribute('aria-label', serving.label + ': ' + serving.title + ', ' + serving.until + '. See the menu.');
-    tag.addEventListener('click', function () { showMealTab(serving.meal); });
+    stamp.setAttribute('aria-label', serving.label + ': ' + stamp.querySelector('.now-meal').textContent + ', ' + serving.until + '. See the menu.');
+    stamp.addEventListener('click', function () { showMealTab(serving.meal); });
 
     // Open the menu on what is being served now and mark that tab
     var currentTab = document.getElementById('tab-' + serving.meal);
@@ -173,7 +172,7 @@
     if (!mapFrame || mapFrame.querySelector('iframe')) { return; }
     var iframe = document.createElement('iframe');
     iframe.src = mapFrame.getAttribute('data-src');
-    iframe.title = 'Map showing Bostan on Strada Moților, Cluj-Napoca';
+    iframe.title = 'Map showing Garden Table on Strada Moților, Cluj-Napoca';
     iframe.loading = 'lazy';
     iframe.referrerPolicy = 'no-referrer-when-downgrade';
     iframe.allowFullscreen = true;
